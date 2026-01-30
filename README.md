@@ -91,9 +91,16 @@ python train.py
 
 1. We conduct the first experiment to detect and track the objects in entire space and render every frame into a video
 
+https://github.com/user-attachments/assets/a41984a2-13f6-4409-b296-3eb1f2fa4992
 
 
 2. We conduct the second experiment to detect and track the objects on the road to give better result and more consistent tracking output, we also render every frame into a video
+
+
+
+https://github.com/user-attachments/assets/61e09a24-e751-4caf-b052-57f45204365c
+
+
 
 For comparing the 2 experiments, we show the 4 different time frames (1913, 2047, 2211 and 2381, respectively from left to right), these frames include multiple objects with crossing pedestrian, car approaching. In the first image, the algorithm can detect the pedestrians on the top-right corner which is far from sensor:
 - For the first experiment
