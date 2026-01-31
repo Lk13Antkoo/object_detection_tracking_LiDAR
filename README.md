@@ -46,7 +46,7 @@ To implement the code, we recommend using operation system:
 
 ## 3. Main function
 This section will explain the main function used in the pipeline, do not execute.
-1. To downsample the cloud point and perform RANSCAN:
+1. To downsample the cloud point and perform RANSCAN, we can adjust the distance_threshold to set how far the point is to the plane to be considered as ground points:
 ```
 pcd = pcd.voxel_down_sample(voxel_size=0.1)
 
@@ -61,8 +61,10 @@ np.array(outlier_cloud.cluster_dbscan(eps=0.4, min_points=7, print_progress=Fals
 
 3. The function filter_box(plane_model, inlier_cloud, outlier_cloud, labels) is used to make the bounding boxes.
 
-4. The function assignIds is used to track ID of object
-
+4. The function assignIds is used to track ID of object using Hungarian algorithm, we can adjust the maxDistance between the centre of bounding boxes:
+```
+def assignIds(prevDf, currDf, next_id, maxDistance=4.0):
+```
 
 ## 4. How to run
 
@@ -83,6 +85,9 @@ source ./venv/bin/activate
 pip install -r requirements.txt
 ```
 5. Traning
+   - If you want to run the training on just a few frames please adjust **list_frame = list(range(1849, 1853))** on train.py
+   - For the entire screen object detection experiment: set X_positive = 250, X_negative = -250 and Y_positive = 250
+   - For on the road object detection: set  set X_positive = 1.2, X_negative = -8 and Y_positive = 14.5
 ```bash
 python train.py
 ```
