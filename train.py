@@ -163,7 +163,7 @@ def assignIds(prevDf, currDf, next_id, maxDistance=4.0):
 
 def main():
     # 1. Define frames to process
-    list_frame = list(range(1849, 1853))
+    list_frame = list(range(1849, 2567))
 
     previous_dataframe_info = pd.DataFrame(columns=['object_id', 'x', 'y', 'z'])
     global_id_object = 0
