@@ -41,7 +41,7 @@ File structure:
 
 To implement the code, we recommend using operation system: 
 - Linux operation
-- At leaset 3GB ROM for storage
+- At leaset 4GB ROM for storage
 - Library: Open3D
 
 ## 3. Main function
