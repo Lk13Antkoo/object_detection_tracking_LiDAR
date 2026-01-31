@@ -70,7 +70,7 @@ def assignIds(prevDf, currDf, next_id, maxDistance=4.0):
 
 1. Clone the repository:
 ```bash
-git clone [https://github.com/Lk13Antkoo/object_detection_tracking.git](https://github.com/Lk13Antkoo/object_detection_tracking_LiDAR.git)
+git clone https://github.com/Lk13Antkoo/object_detection_tracking_LiDAR.git
 cd object_detection_tracking
 ```
 2. Make sure that you put the consecutive csv files on the right folder
